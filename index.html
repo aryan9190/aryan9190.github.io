@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Design</title>
+    <style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Arial", sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .profile-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px #888;
+            padding: 20px;
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-right: 20px;
+            transition: transform 0.3s;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.1);
+        }
+
+        .profile-details {
+            flex: 1;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .info {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .follow-button {
+            background-color: #2ecc71;
+            color: #fff;
+        }
+
+        .follow-button:hover {
+            background-color: #27ae60;
+        }
+
+        .message-button {
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        .message-button:hover {
+            background-color: #2980b9;
+        }
+
+        .bio {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px #888;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Profile</h1>
+    </header>
+    <div class="profile-container">
+        <img class="profile-image" src="your-profile-image.jpg" alt="Profile Picture">
+        <div class="profile-details">
+            <h1>Your Name</h1>
+            <p class="info">Occupation: Web Developer</p>
+            <p class="info">Location: City, Country</p>
+            <p class="info">Email: your.email@example.com</p>
+            <a class="button follow-button" href="#">Follow</a>
+            <a class="button message-button" href="#">Message</a>
+        </div>
+    </div>
+    <div class="bio">
+        <h2>About Me</h2>
+        <p>
+            This is where you can write a detailed description about yourself. 
+            You can mention your background, skills, interests, and any other information you'd like to share.
+        </p>
+    </div>
+</body>
+</html>
