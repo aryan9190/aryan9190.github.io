@@ -1,8 +1,10 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Who Am I</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico|Raleway:400,700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         /* Reset some default styles */
         * {
@@ -12,44 +14,47 @@
         }
 
         body {
-            font-family: "Raleway", sans-serif;
-            background-color: #f5f5f5;
+            font-family: "Roboto", sans-serif;
+            background-color: #f9f9f9;
             color: #333;
+            line-height: 1.6;
         }
 
         header {
-            background-color: #3A9BDC;
+            background-color: #333;
             color: #fff;
             text-align: center;
             padding: 20px;
-            font-family: "Pacifico", cursive;
+            font-size: 28px;
         }
 
-        .profile-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px 0px #888;
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
             padding: 20px;
-            transition: background-color 0.3s;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        .profile-container:hover {
-            background-color: #f0f0f0;
+        .profile {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
         }
 
         .profile-image {
-            width: 200px;
-            height: 200px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             margin-right: 20px;
+            border: 5px solid #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s;
         }
 
         .profile-image:hover {
-            transform: scale(1.1);
+            transform: scale(1.05);
         }
 
         .profile-details {
@@ -59,13 +64,13 @@
         h1 {
             font-size: 36px;
             margin-bottom: 10px;
-            font-family: "Pacifico", cursive;
+            color: #333;
         }
 
         .info {
             font-size: 18px;
             margin-bottom: 5px;
-            font-family: "Raleway", sans-serif;
+            color: #555;
         }
 
         .button {
@@ -76,69 +81,55 @@
             font-weight: 600;
             margin-right: 10px;
             cursor: pointer;
+            background-color: #333;
+            color: #fff;
             transition: background-color 0.3s, color 0.3s;
         }
 
         .button:hover {
-            background-color: #333;
-            color: #fff;
-        }
-
-        .follow-button {
-            background-color: #2ecc71;
-            color: #fff;
-        }
-
-        .message-button {
-            background-color: #3498db;
-            color: #fff;
+            background-color: #555;
         }
 
         .bio {
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px 0px #888;
+            background-color: #f5f5f5;
+            border-radius: 8px;
             padding: 20px;
-            margin-top: 20px;
         }
 
         h2 {
             font-size: 24px;
             margin-bottom: 10px;
+            color: #333;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #555;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Who Am I</h1>
+        Who Am I
     </header>
-    <div class="profile-container">
-        <img class="profile-image" src="pic.jpg" alt="Profile Picture">
-        <div class="profile-details">
-            <h1>Aryan Yadav a.k.a <b>MagSnake</b></h1>
-            <p class="info"><b>Occupation:</b> Web Developer, Programmer, Designer , Hacker , Student</p>
-            <p class="info"><b>Location:</b> Somewhere in India</p>
-            <p class="info"><b>Email:</b> magsnake@outlook.in</p>
-            <a class="button follow-button" href="http://github.com/aryan9190">Follow</a>
-            <a class="button message-button" href="http://GitHub.com/magsnake">More Follow Pages</a>
+    <div class="container">
+        <div class="profile">
+            <img class="profile-image" src="pic.jpg" alt="Profile Picture">
+            <div class="profile-details">
+                <h1>Aryan Yadav a.k.a <b>MagSnake</b></h1>
+                <p class="info"><b>Occupation:</b> Web Developer, Programmer, Designer , Hacker , Student</p>
+                <p class="info"><b>Location:</b> Somewhere in India</p>
+                <p class="info"><b>Email:</b> magsnake@outlook.in</p>
+                <a class="button" href="http://github.com/aryan9190">Follow</a>
+                <a class="button" href="http://GitHub.com/magsnake">More Follow Pages</a>
+            </div>
+        </div>
+        <div class="bio">
+            <h2>About Me</h2>
+            <p>
+                I am a professional with a few years of experience in my field. I specialize in Programming, Application Development and am currently working with HackClub.
+            </p>
         </div>
     </div>
-    <div class="bio">
-        <h2>About Me</h2>
-        <p>
-            I am a professional with a few years of experience in my field. I specialize in Programming, Application Development and am currently working with HackClub.
-        </p>
-    </div>
-
-    <script>
-        // JavaScript for hover effect on the profile image
-        const profileImage = document.querySelector(".profile-image");
-        profileImage.addEventListener("mouseenter", () => {
-            profileImage.style.transform = "scale(1.1)";
-        });
-        profileImage.addEventListener("mouseleave", () => {
-            profileImage.style.transform = "scale(1)";
-        });
-    </script>
 </body>
 </html>
