@@ -17,6 +17,22 @@
 
       <!-- Sky -->
       <a-sky color="#ECECEC"></a-sky>
+
+      <!-- Lighting -->
+      <a-light type="directional" position="-1 2 1" intensity="1"></a-light>
+      <a-light type="ambient" color="#445451"></a-light>
+
+      <!-- Camera with Cursor -->
+      <a-camera position="0 1.6 0">
+        <a-cursor></a-cursor>
+      </a-camera>
+
+      <!-- Additional Animated Shapes -->
+      <a-box position="1 0.5 -3" rotation="0 45 0" width="0.5" height="0.5" depth="0.5" color="#4CC3D9"
+             animation="property: position; to: 1 2 -3; dir: alternate; dur: 1000; loop: true"></a-box>
+
+      <a-sphere position="3 1 -4" radius="1" color="#EF2D5E"
+                animation="property: scale; to: 2 2 2; dir: alternate; dur: 2000; loop: true"></a-sphere>
     </a-scene>
   </body>
 </html>
