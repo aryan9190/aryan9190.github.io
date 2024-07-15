@@ -15,15 +15,4 @@ function fetchGitHubStats() {
           <p>${repo.description}</p>
           <a href="${repo.html_url}" target="_blank">View on GitHub</a>
         `;
-        statsDiv.appendChild(repoDiv);
-      });
-    })
-    .catch(error => console.error('Error fetching GitHub data:', error));
-}
-
-const form = document.getElementById('contact-form');
-form.addEventListener('submit', function (e) {
-  e.preventDefault();
-  alert('Message sent successfully!');
-  form.reset();
-});
+        stats
