@@ -1,83 +1,42 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>3D Website</title>
+    <title>3D Model City</title>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <style>
       body { margin: 0; }
-      .nav { position: absolute; top: 10px; left: 10px; color: white; z-index: 1; }
-      .nav a { margin-right: 10px; color: white; text-decoration: none; }
+      #info { position: absolute; top: 10px; left: 10px; color: white; z-index: 1; }
     </style>
   </head>
   <body>
-    <div class="nav">
-      <a href="#section1">Home</a>
-      <a href="#section2">About</a>
-      <a href="#section3">Contact</a>
+    <div id="info">
+      <h2>3D Model City</h2>
+      <p>Use your mouse or touch to explore the city from the top view.</p>
     </div>
     <a-scene>
-      <!-- Camera with Cursor -->
-      <a-entity id="camera" camera position="0 1.6 0" look-controls>
-        <a-cursor></a-cursor>
-      </a-entity>
+      <!-- Camera setup for top-down view -->
+      <a-entity id="camera" camera position="0 50 0" rotation="-90 0 0" look-controls></a-entity>
 
-      <!-- Home Section -->
-      <a-entity id="section1" position="0 0 0">
-        <a-box position="0 1.5 -3" rotation="0 45 0" width="1" height="1" depth="1" color="#4CC3D9" animation="property: rotation; to: 0 405 0; loop: true; dur: 4000"></a-box>
-        <a-text value="Welcome to my 3D Website" position="0 3 -4" width="6" color="#FFF"></a-text>
-      </a-entity>
+      <!-- Ground plane -->
+      <a-plane position="0 0 0" rotation="-90 0 0" width="200" height="200" color="#7BC8A4"></a-plane>
 
-      <!-- About Section -->
-      <a-entity id="section2" position="10 0 0">
-        <a-sphere position="0 1.25 -3" radius="1.25" color="#EF2D5E"></a-sphere>
-        <a-text value="About Us" position="0 3 -4" width="6" color="#FFF"></a-text>
-        <a-text value="We create amazing 3D experiences" position="0 2 -4" width="6" color="#FFF"></a-text>
-      </a-entity>
+      <!-- Buildings and Landmarks -->
+      <a-box position="0 1 -10" depth="10" height="10" width="10" color="#4CC3D9"></a-box> <!-- Example Building -->
+      <a-box position="20 1 -30" depth="5" height="15" width="5" color="#EF2D5E"></a-box> <!-- Example Building -->
+      <a-box position="-20 1 -20" depth="15" height="7" width="15" color="#FFC65D"></a-box> <!-- Example Building -->
+      <a-box position="10 1 20" depth="8" height="12" width="8" color="#F78C6C"></a-box> <!-- Example Building -->
+      <a-box position="-15 1 15" depth="12" height="10" width="12" color="#39A0ED"></a-box> <!-- Example Building -->
 
-      <!-- Contact Section -->
-      <a-entity id="section3" position="20 0 0">
-        <a-cylinder position="0 1 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-        <a-text value="Contact Us" position="0 3 -4" width="6" color="#FFF"></a-text>
-        <a-text value="@magsnake" position="0 2 -4" width="6" color="#FFF"></a-text>
-      </a-entity>
+      <!-- Roads -->
+      <a-plane position="0 0 -15" rotation="-90 0 0" width="40" height="5" color="#444"></a-plane>
+      <a-plane position="15 0 0" rotation="-90 0 0" width="5" height="40" color="#444"></a-plane>
 
-      <!-- Navigation Points -->
-      <a-entity position="0 0 0">
-        <a-sphere position="0 1.6 -1" radius="0.1" color="#00FF00" id="nav1"></a-sphere>
-        <a-sphere position="10 1.6 -1" radius="0.1" color="#00FF00" id="nav2"></a-sphere>
-        <a-sphere position="20 1.6 -1" radius="0.1" color="#00FF00" id="nav3"></a-sphere>
-      </a-entity>
-
-      <!-- Sky and Ground -->
-      <a-sky color="#ECECEC"></a-sky>
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="40" height="40" color="#7BC8A4"></a-plane>
+      <!-- Central Park -->
+      <a-plane position="0 0 10" rotation="-90 0 0" width="30" height="30" color="#3B8B3B"></a-plane>
 
       <!-- Lighting -->
       <a-light type="directional" position="-1 2 1" intensity="1"></a-light>
       <a-light type="ambient" color="#445451"></a-light>
     </a-scene>
-    <script>
-      // JavaScript for navigation
-      document.querySelector('.nav a[href="#section1"]').addEventListener('click', () => {
-        document.querySelector('#camera').setAttribute('position', '0 1.6 0');
-      });
-      document.querySelector('.nav a[href="#section2"]').addEventListener('click', () => {
-        document.querySelector('#camera').setAttribute('position', '10 1.6 0');
-      });
-      document.querySelector('.nav a[href="#section3"]').addEventListener('click', () => {
-        document.querySelector('#camera').setAttribute('position', '20 1.6 0');
-      });
-
-      // Navigation point interaction
-      document.querySelector('#nav1').addEventListener('click', () => {
-        document.querySelector('#camera').setAttribute('position', '0 1.6 0');
-      });
-      document.querySelector('#nav2').addEventListener('click', () => {
-        document.querySelector('#camera').setAttribute('position', '10 1.6 0');
-      });
-      document.querySelector('#nav3').addEventListener('click', () => {
-        document.querySelector('#camera').setAttribute('position', '20 1.6 0');
-      });
-    </script>
   </body>
-</html>
+  </html>
