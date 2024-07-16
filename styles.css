@@ -1,9 +1,11 @@
+@import url('https://css.hackclub.com/fonts.css');
+
 body {
-  font-family: 'Arial', sans-serif;
+  background-color: #1a1a1a;
+  color: #f4f4f4;
+  font-family: 'HQ Regular', 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background: #f4f4f4;
-  color: #333;
 }
 
 .header-content {
@@ -32,73 +34,6 @@ body {
   25% { content: "Hacker"; }
   50% { content: "Coder"; }
   75% { content: "Programmer"; }
-}
-
-section {
-  padding: 2rem 0;
-}
-
-h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-label {
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-input, textarea {
-  margin-bottom: 10px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  background: #007bff;
-  color: #fff;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #0056b3;
-}
-
-footer {
-  background: #333;
-  color: #fff;
-  text-align: center;
-  padding: 1rem 0;
-}
-
-footer a {
-  color: #fff;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-iframe {
-  width: 100%;
-  height: 400px;
-  margin-top: 20px;
-}
-
-#github-stats {
-  display: flex;
-  align-items: center;
 }
 
 .marquee {
@@ -133,4 +68,4 @@ iframe {
   width: 300px;
   height: auto;
   border-radius: 10px;
-    }
+  }
